@@ -10,7 +10,7 @@ using WildfrostModMiya;
 
 namespace Cursed3dSpritesMod
 {
-    [BepInPlugin("WildFrost.Bglobb.Cursed3dSprites", "Cursed 3D Sprites Mod", "0.0.3")]
+    [BepInPlugin("WildFrost.Bglobb.Cursed3dSprites", "Cursed 3D Sprites Mod", "0.0.4")]
     [BepInDependency("WildFrost.Miya.WildfrostAPI")]
     [BepInProcess("Wildfrost.exe")]
     public class BglobbPlugin : BasePlugin
@@ -57,6 +57,7 @@ namespace Cursed3dSpritesMod
         public override void Load()
         {
             Instance = this;
+            var debugBool = false;
             ClassInjector.RegisterTypeInIl2Cpp<Behaviour>();
             Harmony.CreateAndPatchAll(System.Reflection.Assembly.GetExecutingAssembly(), "WildFrost.Bglobb.BglobbCardPack");
             AddComponent<Behaviour>();
@@ -64,22 +65,32 @@ namespace Cursed3dSpritesMod
             {
 
 
-
                 HandleTaintedCard("BigBerry", (originalData, createdData) => createdData
                   .SetSprites("..\\bglob-Cursed3dSpritesMod\\sprites\\NewBigBerry", "..\\bglob-Cursed3dSpritesMod\\sprites\\berryBck")
-                  .AddToPets()
                  );
 
                 HandleTaintedCard("HeartmistStation", (originalData, createdData) => createdData
                   .SetSprites("..\\bglob-Cursed3dSpritesMod\\sprites\\NewMist", "..\\bglob-Cursed3dSpritesMod\\sprites\\mistBck")
-                  .AddToPets()
                  );
 
                 // This won't actually modify his sprite, but it will set his background properly
                 HandleTaintedCard("LilBerry", (originalData, createdData) => createdData
                   .SetSprites("..\\bglob-Cursed3dSpritesMod\\sprites\\NewLittleBerry", "..\\bglob-Cursed3dSpritesMod\\sprites\\berryBck")
-                  .AddToPets()
                  );
+                if (debugBool)
+                {
+                    HandleTaintedCard("BigBerry", (originalData, createdData) => createdData
+                      .AddToPets()
+                     );
+
+                    HandleTaintedCard("HeartmistStation", (originalData, createdData) => createdData
+                      .AddToPets()
+                     );
+
+                    HandleTaintedCard("LilBerry", (originalData, createdData) => createdData
+                      .AddToPets()
+                     );
+                }
 
 
             };
