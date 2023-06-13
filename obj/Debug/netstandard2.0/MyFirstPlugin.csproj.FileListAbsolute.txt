@@ -1,0 +1,6 @@
+D:\Code\wildfrostmods\Calebs Mods\MyFirstPlugin\obj\Debug\netstandard2.0\MyFirstPlugin.csproj.AssemblyReference.cache
+D:\Code\wildfrostmods\Calebs Mods\MyFirstPlugin\obj\Debug\netstandard2.0\PluginInfo.cs
+D:\Code\wildfrostmods\Calebs Mods\MyFirstPlugin\obj\Debug\netstandard2.0\MyFirstPlugin.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\wildfrostmods\Calebs Mods\MyFirstPlugin\obj\Debug\netstandard2.0\MyFirstPlugin.AssemblyInfoInputs.cache
+D:\Code\wildfrostmods\Calebs Mods\MyFirstPlugin\obj\Debug\netstandard2.0\MyFirstPlugin.AssemblyInfo.cs
+D:\Code\wildfrostmods\Calebs Mods\MyFirstPlugin\obj\Debug\netstandard2.0\MyFirstPlugin.csproj.CoreCompileInputs.cache
