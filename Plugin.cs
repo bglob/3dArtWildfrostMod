@@ -10,7 +10,7 @@ using WildfrostModMiya;
 
 namespace Cursed3dSpritesMod
 {
-    [BepInPlugin("WildFrost.Bglobb.Cursed3dSprites", "Cursed 3D Sprites Mod", "0.0.1")]
+    [BepInPlugin("WildFrost.Bglobb.Cursed3dSprites", "Cursed 3D Sprites Mod", "0.0.3")]
     [BepInDependency("WildFrost.Miya.WildfrostAPI")]
     [BepInProcess("Wildfrost.exe")]
     public class BglobbPlugin : BasePlugin
@@ -50,34 +50,34 @@ namespace Cursed3dSpritesMod
                 .Find(a => a.Cast<UnityEngine.UI.Image>().m_Sprite == card.mainSprite)
                 .Cast<UnityEngine.UI.Image>();
 
-            image.m_Sprite = CardAdder.LoadSpriteFromCardPortraits("CardPortraits\\NewLittleBerry");
+            image.m_Sprite = CardAdder.LoadSpriteFromCardPortraits("..\\bglob-Cursed3dSpritesMod\\sprites\\NewLittleBerry");
             Instance.Log.LogInfo("Image is injected!");
         }
 
         public override void Load()
         {
-            Instance = this; 
+            Instance = this;
             ClassInjector.RegisterTypeInIl2Cpp<Behaviour>();
             Harmony.CreateAndPatchAll(System.Reflection.Assembly.GetExecutingAssembly(), "WildFrost.Bglobb.BglobbCardPack");
             AddComponent<Behaviour>();
             CardAdder.OnAskForAddingCards += delegate (int i)
             {
 
-                
+
 
                 HandleTaintedCard("BigBerry", (originalData, createdData) => createdData
-                  .SetSprites("CardPortraits\\NewBigBerry", "CardPortraits\\berryBck")
+                  .SetSprites("..\\bglob-Cursed3dSpritesMod\\sprites\\NewBigBerry", "..\\bglob-Cursed3dSpritesMod\\sprites\\berryBck")
                   .AddToPets()
                  );
 
                 HandleTaintedCard("HeartmistStation", (originalData, createdData) => createdData
-                  .SetSprites("CardPortraits\\NewMist", "CardPortraits\\mistBck")
+                  .SetSprites("..\\bglob-Cursed3dSpritesMod\\sprites\\NewMist", "..\\bglob-Cursed3dSpritesMod\\sprites\\mistBck")
                   .AddToPets()
                  );
 
                 // This won't actually modify his sprite, but it will set his background properly
                 HandleTaintedCard("LilBerry", (originalData, createdData) => createdData
-                  .SetSprites("CardPortraits\\NewLittleBerry", "CardPortraits\\berryBck")
+                  .SetSprites("..\\bglob-Cursed3dSpritesMod\\sprites\\NewLittleBerry", "..\\bglob-Cursed3dSpritesMod\\sprites\\berryBck")
                   .AddToPets()
                  );
 

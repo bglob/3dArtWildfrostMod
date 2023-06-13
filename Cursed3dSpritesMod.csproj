@@ -454,6 +454,6 @@
   </ItemGroup>
   
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /y /d &quot;D:\Code\wildfrostmods\Calebs Mods\MyFirstPlugin\bin\Debug\net6.0\Cursed3dSpritesMod.dll&quot; &quot;C:\Users\crwil\AppData\Roaming\r2modmanPlus-local\Wildfrost\profiles\Default\BepInEx\plugins\Bglobb-CardPack-Test&quot;&#xD;&#xA;&#xD;&#xA;xcopy /y /d &quot;D:\Code\wildfrostmods\Calebs Mods\MyFirstPlugin\bin\Debug\net6.0\Cursed3dSpritesMod.dll&quot; &quot;C:\Users\crwil\Desktop\To Upload\Cursed 3D Art\plugins&quot;" />
+    <Exec Command="xcopy /y /d &quot;D:\Code\wildfrostmods\Calebs Mods\setting up git\2\3dArtWildfrostMod\bin\Debug\net6.0\Cursed3dSpritesMod.dll&quot; &quot;C:\Users\crwil\AppData\Roaming\r2modmanPlus-local\Wildfrost\profiles\Default\BepInEx\plugins\Bglobb-CardPack-Test&quot;&#xD;&#xA;&#xD;&#xA;xcopy /y /d &quot;D:\Code\wildfrostmods\Calebs Mods\setting up git\2\3dArtWildfrostMod\bin\Debug\net6.0\Cursed3dSpritesMod.dll&quot; &quot;C:\Users\crwil\Desktop\To Upload\Cursed 3D Art\plugins&quot;" />
   </Target>
 </Project>
